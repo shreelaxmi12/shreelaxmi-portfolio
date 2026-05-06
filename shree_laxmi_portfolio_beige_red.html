@@ -1,0 +1,272 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --beige:#F5F1EB;--cream:#FDFBF8;--red:#8B1A1A;--red-light:#F9EDED;--red-mid:#C0392B;
+  --ink:#1C1A18;--mid:#4A4540;--muted:#8A847C;--border:#E2DDD5;--white:#FFFFFF;
+}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;}
+
+.port{max-width:720px;margin:0 auto;padding:0 1.5rem 3rem;}
+
+.nav{background:var(--cream);border-bottom:1px solid var(--border);padding:.9rem 1.5rem;margin-bottom:0;}
+.nav-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.nav-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--ink);}
+.nav-links{display:flex;gap:1.4rem;}
+.nav-links a{font-size:12.5px;color:var(--muted);text-decoration:none;font-weight:400;letter-spacing:.3px;}
+.nav-links a:hover{color:var(--red);}
+
+.hero{padding:3.5rem 0 3rem;border-bottom:1px solid var(--border);}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;}
+.hero-line{width:32px;height:1.5px;background:var(--red);}
+.hero-eyebrow span{font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;color:var(--red);font-weight:500;}
+.hero h1{font-family:'Playfair Display',serif;font-size:38px;line-height:1.18;letter-spacing:-.4px;color:var(--ink);margin-bottom:.9rem;}
+.hero h1 em{font-style:italic;color:var(--red-mid);}
+.hero-sub{font-size:15.5px;color:var(--mid);max-width:520px;line-height:1.75;margin-bottom:2rem;font-weight:300;}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn{display:inline-block;font-size:12.5px;font-weight:500;padding:9px 20px;border-radius:6px;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;}
+.btn-primary{background:var(--red);color:#fff;border:1px solid var(--red);}
+.btn-primary:hover{background:#701212;}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--border);}
+.btn-outline:hover{border-color:var(--red);color:var(--red);}
+
+.section{padding:2.8rem 0;border-bottom:1px solid var(--border);}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:1.8rem;}
+.sec-head-line{width:24px;height:1.5px;background:var(--red);flex-shrink:0;}
+.sec-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:500;}
+
+.about-text{font-size:15px;color:var(--mid);line-height:1.8;font-weight:300;max-width:620px;}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1.8rem;}
+.stat{background:var(--white);padding:1.1rem 1rem;text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:22px;color:var(--red);font-weight:600;}
+.stat-desc{font-size:11.5px;color:var(--muted);margin-top:3px;letter-spacing:.2px;}
+
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.1rem;}
+.skill-card-label{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:.6rem;}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;}
+.tag{font-size:12px;padding:3px 10px;background:var(--beige);color:var(--mid);border-radius:4px;font-weight:400;}
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.proj-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;display:flex;flex-direction:column;gap:.75rem;transition:border-color .2s;}
+.proj-card:hover{border-color:var(--red-mid);}
+.proj-type{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);font-weight:500;}
+.proj-title{font-family:'Playfair Display',serif;font-size:17px;line-height:1.3;color:var(--ink);}
+.proj-body{font-size:13px;color:var(--mid);line-height:1.65;font-weight:300;flex:1;}
+.proj-insight{background:var(--red-light);border-left:2px solid var(--red);border-radius:0 6px 6px 0;padding:.65rem .85rem;font-size:12.5px;color:var(--red);line-height:1.55;}
+.proj-insight strong{display:block;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--red-mid);font-weight:500;margin-bottom:.2rem;}
+.proj-tools{display:flex;flex-wrap:wrap;gap:.3rem;}
+.tool-tag{font-size:11.5px;padding:3px 9px;background:var(--beige);color:var(--mid);border-radius:4px;}
+
+.content-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;}
+.content-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.1rem;display:flex;flex-direction:column;gap:.5rem;}
+.content-icon{width:32px;height:32px;border-radius:8px;background:var(--red-light);display:flex;align-items:center;justify-content:center;}
+.content-icon svg{width:16px;height:16px;stroke:var(--red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.content-title{font-size:13.5px;font-weight:500;color:var(--ink);}
+.content-body{font-size:12.5px;color:var(--muted);line-height:1.6;font-weight:300;}
+
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;}
+.ai-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.6rem;}
+.ai-dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
+.ai-tool{font-size:13.5px;font-weight:500;color:var(--ink);}
+.ai-use{font-size:12px;color:var(--muted);line-height:1.55;font-weight:300;}
+
+.cert-list{display:flex;flex-direction:column;gap:.6rem;}
+.cert{display:flex;align-items:center;gap:.9rem;padding:.8rem 1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;}
+.cert-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;}
+.cert-name{font-size:13.5px;font-weight:500;color:var(--ink);flex:1;}
+.cert-org{font-size:12px;color:var(--muted);}
+.cert-badge{font-size:11px;padding:2px 9px;border-radius:10px;background:var(--beige);color:var(--muted);}
+.cert-badge.active{background:var(--red-light);color:var(--red);}
+
+.contact-wrap{background:var(--beige);border-radius:14px;padding:2.2rem;text-align:center;margin-top:2.8rem;}
+.contact-wrap h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--ink);margin-bottom:.5rem;}
+.contact-wrap p{font-size:14px;color:var(--mid);font-weight:300;margin-bottom:1.5rem;}
+.contact-btns{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}
+.contact-detail{font-size:13px;color:var(--muted);margin-top:1.3rem;letter-spacing:.2px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.fade{opacity:0;animation:fadeUp .5s ease forwards;}
+.d1{animation-delay:.05s;}.d2{animation-delay:.12s;}.d3{animation-delay:.2s;}.d4{animation-delay:.28s;}.d5{animation-delay:.36s;}.d6{animation-delay:.44s;}.d7{animation-delay:.52s;}
+</style>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Shree Laxmi Kolli portfolio — AI-Driven Marketing & Data Analyst</h2>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-name">Shree Laxmi Kolli</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#content">Content</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="port">
+
+  <div class="hero fade d1" id="about">
+    <div class="hero-eyebrow"><div class="hero-line"></div><span>Open to opportunities · Bengaluru</span></div>
+    <h1>AI-Driven Marketing<br>&amp; <em>Data Analyst</em></h1>
+    <p class="hero-sub">I turn raw data into decisions — and decisions into content. From RFM segmentation to Instagram Reels, I work at the intersection of analytics and audience.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="mailto:shreelaxmikolli@gmail.com">Get in touch</a>
+      <a class="btn btn-outline" href="https://linkedin.com/in/shreelaxmi-kolli">LinkedIn</a>
+      <a class="btn btn-outline" href="https://github.com/shreelaxmi12">GitHub</a>
+    </div>
+  </div>
+
+  <div class="section fade d2">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">About me</span></div>
+    <p class="about-text">Data analyst with experience in SQL, Python, and Power BI, transitioning into marketing analytics and AI-driven growth. I've cleaned messy datasets, built ETL pipelines, and segmented customer behaviour across 50,000+ transactions. Alongside that, I create short-form Instagram Reels — using ChatGPT for ideation and tracking performance metrics to refine what works.</p>
+    <div class="about-stats">
+      <div class="stat"><div class="stat-num">50k+</div><div class="stat-desc">Transactions analysed</div></div>
+      <div class="stat"><div class="stat-num">40%</div><div class="stat-desc">Response accuracy lift</div></div>
+      <div class="stat"><div class="stat-num">80%</div><div class="stat-desc">Reporting time saved</div></div>
+    </div>
+  </div>
+
+  <div class="section fade d3" id="skills">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">Skills</span></div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-label">Analytics & Data</div>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">BI & Reporting</div>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">DAX</span><span class="tag">KPI Dashboards</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">Digital Marketing</div>
+        <div class="tags"><span class="tag">Content Strategy</span><span class="tag">Social Analytics</span><span class="tag">Audience Segmentation</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-label">AI & Content Tools</div>
+        <div class="tags"><span class="tag">ChatGPT</span><span class="tag">Canva AI</span><span class="tag">CapCut</span><span class="tag">Prompt Writing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fade d4" id="projects">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">Projects & case studies</span></div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-type">Marketing Analytics</div>
+        <div class="proj-title">E-Commerce Customer Growth Analysis</div>
+        <p class="proj-body">Segmented 50,000+ transactions into 3 cohorts driving 60% of revenue using RFM analysis. Mapped seasonality patterns to channel, timing, and offer recommendations per segment.</p>
+        <div class="proj-insight"><strong>Key insight</strong>High-value → retargeting · Seasonal → timed promos · Low-freq → re-engagement</div>
+        <div class="proj-tools"><span class="tool-tag">SQL</span><span class="tool-tag">Python</span><span class="tool-tag">MySQL</span><span class="tool-tag">Power BI</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-type">Data Engineering & BI</div>
+        <div class="proj-title">Automated KPI Reporting Pipeline</div>
+        <p class="proj-body">Automated the full KPI workflow — Leads, Pipeline Value, Conversion Rate — cutting manual reporting by 80%. Embedded validation at every stage; zero discrepancies flagged.</p>
+        <div class="proj-insight"><strong>Business impact</strong>Weekly funnel dashboards surfaced where conversions stalled</div>
+        <div class="proj-tools"><span class="tool-tag">Python</span><span class="tool-tag">SQL</span><span class="tool-tag">Power BI</span><span class="tool-tag">Tableau</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-type">NLP & AI · 360DigiTMG</div>
+        <div class="proj-title">Healthcare Query Resolution Pipeline</div>
+        <p class="proj-body">Built an NLP pipeline with FAISS vector retrieval — improved response accuracy by 40%, cut irrelevant responses by 35%, scaled to 10x records. ETL validation ensured clean input throughout.</p>
+        <div class="proj-tools"><span class="tool-tag">Python</span><span class="tool-tag">FAISS</span><span class="tool-tag">NLP</span><span class="tool-tag">SQL</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-type">Machine Learning · Varcons</div>
+        <div class="proj-title">Classification Model Optimisation</div>
+        <p class="proj-body">Cleaned 10,000+ records to 95%+ accuracy. Tuned models to 89% accuracy, cutting training time by 30%. Reports for stakeholders removed 2 sign-off review rounds.</p>
+        <div class="proj-tools"><span class="tool-tag">Scikit-learn</span><span class="tool-tag">Pandas</span><span class="tool-tag">NumPy</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section fade d5" id="content">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">Content portfolio</span></div>
+    <div class="content-grid">
+
+      <div class="content-card">
+        <div class="content-icon">
+          <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.723v6.554a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+        </div>
+        <div class="content-title">Instagram Reels — Cafes & Lifestyle</div>
+        <div class="content-body">Short-form content using hooks, trending audio, and storytelling. Edited with CapCut — fast cuts and native text overlays for organic reach.</div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+        </div>
+        <div class="content-title">AI-Assisted Ideation</div>
+        <div class="content-body">Use ChatGPT to generate caption variations and multiple hook options. Select based on audience fit, not just what sounds good.</div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="content-title">Performance Tracking</div>
+        <div class="content-body">Track views, saves, and shares per post. Use engagement data to refine content format and topic focus — same habit as dashboard analytics, applied to content.</div>
+      </div>
+
+      <div class="content-card">
+        <div class="content-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="content-title">Niches: Skincare & Local</div>
+        <div class="content-body">Focused on cafes, skincare, and local lifestyle content — niche targeting over broad reach, with consistent visual tone per topic.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section fade d6">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">AI in my workflow</span></div>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-dot"></div>
+        <div class="ai-tool">ChatGPT</div>
+        <div class="ai-use">Caption writing, hook testing, content ideation, prompt refinement</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-dot"></div>
+        <div class="ai-tool">Canva AI</div>
+        <div class="ai-use">Thumbnail design, quick visual assets, brand consistency</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-dot"></div>
+        <div class="ai-tool">FAISS + NLP</div>
+        <div class="ai-use">Semantic retrieval, intent classification, vector search at scale</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fade d6">
+    <div class="sec-head"><div class="sec-head-line"></div><span class="sec-label">Certifications</span></div>
+    <div class="cert-list">
+      <div class="cert"><div class="cert-dot"></div><span class="cert-name">Oracle Cloud Infrastructure 2025</span><span class="cert-org">Certified Data Science Professional</span><span class="cert-badge active">Certified</span></div>
+      <div class="cert"><div class="cert-dot"></div><span class="cert-name">Deloitte Data Analytics Simulation</span><span class="cert-org">Forage</span><span class="cert-badge active">Certified</span></div>
+      <div class="cert"><div class="cert-dot" style="background:var(--muted);"></div><span class="cert-name">Digital Marketing Certification</span><span class="cert-org">Google</span><span class="cert-badge">In Progress</span></div>
+      <div class="cert"><div class="cert-dot"></div><span class="cert-name">AI Study Jam 2024</span><span class="cert-org">Google</span><span class="cert-badge active">Certified</span></div>
+    </div>
+  </div>
+
+  <div class="contact-wrap fade d7" id="contact">
+    <h3>Let's work together</h3>
+    <p>Open to internships and roles in marketing analytics, growth, and AI-driven content.</p>
+    <div class="contact-btns">
+      <a class="btn btn-primary" href="mailto:shreelaxmikolli@gmail.com">Email me</a>
+      <a class="btn btn-outline" href="https://linkedin.com/in/shreelaxmi-kolli">LinkedIn</a>
+      <a class="btn btn-outline" href="https://github.com/shreelaxmi12">GitHub</a>
+    </div>
+    <p class="contact-detail">shreelaxmikolli@gmail.com &nbsp;·&nbsp; 9353500952 &nbsp;·&nbsp; Bengaluru, KA</p>
+  </div>
+
+</div>
